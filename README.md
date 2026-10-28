@@ -9,4 +9,4 @@
  - 사용 불가능한 패치 수정 | Fixed unavailable patch (Line 442)
    - SCHED_EXT+BORE 스케줄러가 언제부턴가 사망하여 bore+cachy 패치로 수정하였습니다.
 
-mainline을 이용하고 싶으신 경우 `mainline` 브렌치로 이동하여 주세요.
+> mainline을 이용하고 싶으신 경우 `mainline` 브렌치로 이동하여 주세요.
