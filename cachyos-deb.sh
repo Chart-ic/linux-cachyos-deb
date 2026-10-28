@@ -378,7 +378,7 @@ EOF
     # Compile the kernel and modules
     make -j$(nproc)
     mkdir -p /tmp/kernel-modules
-    make modules_install INSTALL_MOD_PATH=/tmp/kernel-modules
+    make INSTALL_MOD_STRIP=1 modules_install INSTALL_MOD_PATH=/tmp/kernel-modules
 
     if [ "$_zfs" == "yes" ]; then
         LINUX_DIR=$(pwd)
@@ -439,7 +439,7 @@ do_things() {
     ## List of CachyOS schedulers
     case "$_cpusched_selection" in
     cachyos) # CachyOS Scheduler (BORE + SCHED-EXT)
-        patches+=("${_patchsource}/sched/0001-sched-ext.patch") ;;
+        patches+=("${_patchsource}/sched/0001-bore-cachy.patch") ;;
     bore) ## BORE Scheduler
         patches+=("${_patchsource}/sched/0001-bore-cachy.patch") ;;
     rt) ## EEVDF with RT patches
@@ -562,7 +562,8 @@ if [ -n "$1" ]; then
     esac
 fi
 
-_kv_url=$(curl -s https://www.kernel.org | grep -A 1 'id="latest_link"' | awk 'NR==2' | grep -oP 'href="\K[^"]+')
+# _kv_url=$(curl -s https://www.kernel.org | grep -A 1 'id="latest_link"' | awk 'NR==2' | grep -oP 'href="\K[^"]+')
+_kv_url="https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.3.tar.xz"
 
 # extract only the version number
 _kv_name=$(echo $_kv_url | grep -oP 'linux-\K[^"]+')
