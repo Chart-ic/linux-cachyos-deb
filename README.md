@@ -2,7 +2,7 @@
 내가 쓸려고 수정한 것 | edited for myself
 원본 README는 [여기를 참조하세요.](./README_orig.md)
 
-# 주요 변경점 | What's changed?
+## 주요 변경점 | What's changed?
  - `INSTALL_MOD_STRIP=1` 추가 | Added `INSTALL_MOD_STRIP=1` (Line 381)
    - 해당 옵션이 없을 경우 디버깅 심볼로 인하여 초기 ramdisk 용량이 증가한다 하여 추가하였습니다. [참고](https://unix.stackexchange.com/questions/30345/why-is-my-initial-ramdisk-so-big)
 
