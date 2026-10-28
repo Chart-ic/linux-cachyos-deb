@@ -1,6 +1,6 @@
 # CachyOS 커널 빌더
 내가 쓸려고 수정한 것 | edited for myself
-원본 README는 [여기를 참조하세요.](./README_orig.md)
+ > 원본 README는 [여기를 참조하세요.](./README_orig.md)
 
 ## 주요 변경점 | What's changed?
  - `INSTALL_MOD_STRIP=1` 추가 | Added `INSTALL_MOD_STRIP=1` (Line 381)
