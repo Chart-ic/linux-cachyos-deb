@@ -562,8 +562,7 @@ if [ -n "$1" ]; then
     esac
 fi
 
-# _kv_url=$(curl -s https://www.kernel.org | grep -A 1 'id="latest_link"' | awk 'NR==2' | grep -oP 'href="\K[^"]+')
-_kv_url="https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.13.tar.xz"
+_kv_url=$(curl -s https://www.kernel.org | grep -A 1 'id="latest_link"' | awk 'NR==2' | grep -oP 'href="\K[^"]+')
 
 # extract only the version number
 _kv_name=$(echo $_kv_url | grep -oP 'linux-\K[^"]+')
