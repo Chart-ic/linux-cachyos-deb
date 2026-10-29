@@ -9,7 +9,4 @@
  - 사용 불가능한 패치 수정 | Fixed unavailable patch (Line 442)
    - SCHED_EXT+BORE 스케줄러가 언제부턴가 사망하여 bore+cachy 패치로 수정하였습니다.
  
- - 커널 다운로드 링크 수정 | Fixed Kernel download link (Line 565~566)
-   - 기존 링크는 mainline을 이용하는 것으로 알려져 수동으로 링크를 지정하였습니다. 수동으로 지정되었기 때문에 stable 커널 버전이 올라갈 경우 수정됩니다.
-
-   > mainline을 이용하고 싶으신 경우 변경된 부분을 삭제하고 주석을 해제하세요.
+> 특정 버전을 이용하고 싶으신 경우, 565번째 줄을 `_kv_url="(커널 파일 링크)"`로 변경하세요.
